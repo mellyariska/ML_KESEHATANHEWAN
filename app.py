@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler
 # =====================
 @st.cache_data
 def load_data():
-    df = pd.read_excel("data_mencit_tendik_alfinsuhanda.xlxs")  # langsung baca file lokal
+    df = pd.read_excel("data_mencit_tendik_alfinsuhanda.xlsx") # langsung baca file lokal
     return df
 
 df = load_data()
@@ -114,3 +114,4 @@ elif menu == "t-SNE 2D":
     fig, ax = plt.subplots()
     sns.scatterplot(data=df_tsne, x="tSNE1", y="tSNE2", hue="Label Kesehatan", ax=ax)
     st.pyplot(fig)
+
